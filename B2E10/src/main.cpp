@@ -28,7 +28,8 @@ int main(){
 
 #include <Arduino.h>
 
-	float a,b,c,resultado1 = 0,resultado2 = 0;
+	float a,b,c; 
+	float resultado1 = 0,resultado2 = 0;
 
 void setup() 
 {
@@ -38,9 +39,12 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el valor de a: "); while(!Serial.available()){} a = Serial.parseInt();	
-	Serial.println("Digite el valor de b: "); while(!Serial.available()){} b = Serial.parseInt();
-	Serial.println("Digite el valor de c: "); while(!Serial.available()){} c = Serial.parseInt();	
+	Serial.println("Digite el valor de a: "); while(!Serial.available()){} a = Serial.parseInt();
+	Serial.print(String(a));	
+	Serial.println("\nDigite el valor de b: "); while(!Serial.available()){} b = Serial.parseInt();
+	Serial.print(String(b));
+	Serial.println("\nDigite el valor de c: "); while(!Serial.available()){} c = Serial.parseInt();
+	Serial.print(String(c));	
 	
 	resultado1 = (-b+sqrt(pow(b,2)-4*a*c))/(2*a);
 	resultado2 = (-b-sqrt(pow(b,2)-4*a*c))/(2*a);
