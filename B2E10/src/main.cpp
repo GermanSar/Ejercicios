@@ -38,9 +38,9 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el valor de a: "); while(Serial.available()){} a = Serial.parseInt();	
-	Serial.println("Digite el valor de b: "); while(Serial.available()){} b = Serial.parseInt();
-	Serial.println("Digite el valor de c: "); while(Serial.available()){} c = Serial.parseInt();	
+	Serial.println("Digite el valor de a: "); while(!Serial.available()){} a = Serial.parseInt();	
+	Serial.println("Digite el valor de b: "); while(!Serial.available()){} b = Serial.parseInt();
+	Serial.println("Digite el valor de c: "); while(!Serial.available()){} c = Serial.parseInt();	
 	
 	resultado1 = (-b+sqrt(pow(b,2)-4*a*c))/(2*a);
 	resultado2 = (-b-sqrt(pow(b,2)-4*a*c))/(2*a);
