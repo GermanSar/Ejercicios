@@ -12,8 +12,8 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite un numero: "); while(Serial.available()){} n1 = Serial.parseInt();	
-    Serial.println("Digite otro numero: "); while(Serial.available()){} n2 = Serial.parseInt();
+	Serial.println("Digite un numero: "); while(!Serial.available()){} n1 = Serial.parseInt();	
+    Serial.println("Digite otro numero: "); while(!Serial.available()){} n2 = Serial.parseInt();
 
 	suma = n1 + n2;
 	resta = n1 - n2;
