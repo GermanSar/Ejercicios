@@ -63,10 +63,13 @@ void loop()
 	
 	for(int i=1;i<=5;i++){
 	
-	Serial.println("Digite la nota del primer examen:  "); while(Serial.available()){} examen1 = Serial.parseInt();	
-    Serial.println("Digite la nota del segundo examen: "); while(Serial.available()){} examen2 = Serial.parseInt();
-	Serial.println("Digite la nota del tercer examen: "); while(Serial.available()){} examen3 = Serial.parseInt();
-	
+	Serial.println("Digite la nota del primer examen:  "); while(!Serial.available()){} examen1 = Serial.parseInt();	
+   	Serial.print(String(examen1));
+	Serial.println("Digite la nota del segundo examen: "); while(!Serial.available()){} examen2 = Serial.parseInt();
+	Serial.print(String(examen2));
+	Serial.println("Digite la nota del tercer examen: "); while(!Serial.available()){} examen3 = Serial.parseInt();
+	Serial.print(String(examen3));
+		
 	//examinando la opcion a
 		if((examen1>10.5)&&(examen2>10.5)&&(examen3>10.5)){
 			aprobaron_todos_examenes++;
