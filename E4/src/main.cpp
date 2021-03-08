@@ -39,9 +39,12 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite su edad: "); while(Serial.available()){} edad = Serial.parseInt();	
-    Serial.println("Digite su sexo: "); while(Serial.available()){} sexo = Serial.parseInt();	
-	Serial.println("Digite su altura en metros: "); while(Serial.available()){} altura = Serial.parseInt();	
+	Serial.println("Digite su edad: "); while(!Serial.available()){} edad = Serial.parseInt();	
+        Serial.print(String(edad));
+	Serial.println("Digite su sexo: "); while(!Serial.available()){} sexo = Serial.parseInt();	
+	Serial.print(String(sexo));
+	Serial.println("Digite su altura en metros: "); while(!Serial.available()){} altura = Serial.parseInt();	
+	Serial.print(String(altura));
 
   	Serial.println("Edad: " + String(edad));
 	Serial.println("Edad: " + String(sexo));
