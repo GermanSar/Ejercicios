@@ -40,7 +40,8 @@ void loop()
 {
 
 	do{
-		Serial.println("Digite un numero[1-10]:  "); while(Serial.available()){} numero = Serial.parseInt();	
+		Serial.println("Digite un numero[1-10]:  "); while(!Serial.available()){} numero = Serial.parseInt();	
+		Serial.print(String(numero));
 		if(numero>0){
 			conteo++; //aumentamos el conteo cada vez que encuentra un numero mayor a 0	
 		}
