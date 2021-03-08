@@ -39,9 +39,11 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el valor de n1: "); while(Serial.available()){} n1 = Serial.parseInt();	
-	Serial.println("Digite el valor de n2: "); while(Serial.available()){} n2 = Serial.parseInt();
-		
+	Serial.println("Digite el valor de n1: "); while(!Serial.available()){} n1 = Serial.parseInt();	
+	Serial.print(String(n1));
+	Serial.println("Digite el valor de n2: "); while(!Serial.available()){} n2 = Serial.parseInt();
+	Serial.print(String(n2));
+	
 	if(n1==n2){
 		Serial.println("Ambos numeros son iguales: " + String(n1==n2));
 	}
