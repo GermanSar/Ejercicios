@@ -34,7 +34,8 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el precio del producto: "); while(!Serial.available()){} precio = Serial.parseInt();	
+	Serial.println("Digite el precio del producto: "); while(!Serial.available()){} precio = Serial.parseInt();
+	Serial.print(String(precio));
     
 	IVA = precio*0.21;
 	precioFinal = precio + IVA;
