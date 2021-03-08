@@ -34,8 +34,9 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite la cantidad de elementos que desea sumar: "); while(Serial.available()){} n = Serial.parseInt();	
-    
+	Serial.println("Digite la cantidad de elementos que desea sumar: "); while(!Serial.available()){} n = Serial.parseInt();	
+    	Serial.print(String(n));
+	
 	for(int i=1;i<=2*n-1;i+=2){
 		suma += i;
 	}
