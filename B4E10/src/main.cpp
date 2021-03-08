@@ -36,8 +36,9 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite el total de elementos a sumar: "); while(Serial.available()){} n = Serial.parseInt();	
-    
+	Serial.println("Digite el total de elementos a sumar: "); while(!Serial.available()){} n = Serial.parseInt();	
+    	Serial.print(String(n));
+	
 	for(int i=1;i<=n;i++){
 		factorial *= i; //primero sacamos los factoriales
 		suma +=factorial; //luego los sumamos
