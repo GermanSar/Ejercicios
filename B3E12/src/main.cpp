@@ -58,19 +58,22 @@ void loop()
 	Serial.println("2. Numero par o impar");
 	Serial.println("3. Salir");
 	Serial.println("Opcion:");
-	Serial.println("Opc: "); while(Serial.available()){} opc = Serial.parseInt();
+	Serial.println("Opc: "); while(!Serial.available()){} opc = Serial.parseInt();
+	Serial.print(String(opc));
 
     switch(opc){
 		case 1: 
-			Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
-
+			Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+			Serial.print(String(numero));
+		    
 			cubo = pow(numero,3); //elevamos el numero al cubo
 
 			Serial.println("el cubo del numero es: " + String(cubo));
 			
 		case 2: 
-			Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
-			
+			Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+			Serial.print(String(numero));
+		    
 			if(numero%2==0){
 				Serial.println("el numero es par");
 			}
