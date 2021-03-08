@@ -38,8 +38,9 @@ void setup()
 void loop() 
 {
 	do{
-	Serial.println("Digite la cantidad de digitos de la serie: "); while(Serial.available()){} n = Serial.parseInt();	
-    
+	Serial.println("Digite la cantidad de digitos de la serie: "); while(!Serial.available()){} n = Serial.parseInt();	
+    	Serial.print(String(n));
+		
 	}while(n<=0);
 	
 	Serial.println("1 ");
