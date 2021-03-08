@@ -40,8 +40,8 @@ void setup()
 void loop() 
 {
 	do{
-		Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
-
+		Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+		Serial.print(String(numero));
 		
 		if(numero>0){
 			suma += numero;
