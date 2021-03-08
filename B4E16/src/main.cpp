@@ -41,12 +41,14 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
+	Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+	Serial.print(String(numero));
 	Serial.println("\nDescomponiendo en factores primos:");
 
 	for(int i=2;numero>1;i++){
 		while(numero%i==0){
-			Serial.println(" "); while(Serial.available()){} i = Serial.parseInt();
+			Serial.println(" "); while(!Serial.available()){} i = Serial.parseInt();
+			Serial.print(String(i));
 			numero /= i;
 		}
 	}
