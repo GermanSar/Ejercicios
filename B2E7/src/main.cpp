@@ -43,10 +43,13 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Ingrese la nota de practica: "); while(Serial.available()){} notapractica = Serial.parseInt();	
-	Serial.println("Ingrese la nota teoria: "); while(Serial.available()){} notateorica = Serial.parseInt();
-	Serial.println("Ingrese la nota de participacion: "); while(Serial.available()){} notaparticipacion = Serial.parseInt();	
-		
+	Serial.println("Ingrese la nota de practica: "); while(!Serial.available()){} notapractica = Serial.parseInt();	
+	Serial.print(String(notapractica));
+	Serial.println("Ingrese la nota teoria: "); while(!Serial.available()){} notateorica = Serial.parseInt();
+	Serial.print(String(notateorica));
+	Serial.println("Ingrese la nota de participacion: "); while(!Serial.available()){} notaparticipacion = Serial.parseInt();	
+	Serial.print(String(notaparticipacion));
+	
   	notapractica= notapractica * 0.30;
 	notateorica *=0.60;
 	notaparticipacion *= 0.10;
