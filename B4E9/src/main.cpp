@@ -34,8 +34,8 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite un numero: "); while(Serial.available()){} n = Serial.parseInt();	
-    
+	Serial.println("Digite un numero: "); while(!Serial.available()){} n = Serial.parseInt();	
+    	Serial.print(String(n));
 
 	for(int i=1;i<=n;i++){
 		factorial *= i;
