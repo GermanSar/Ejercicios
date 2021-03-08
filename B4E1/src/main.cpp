@@ -37,7 +37,8 @@ void loop()
 {
 
 	do{
-		Serial.println("Digite un numero[1-10]:  "); while(Serial.available()){} numero = Serial.parseInt();	
+		Serial.println("Digite un numero[1-10]:  "); while(!Serial.available()){} numero = Serial.parseInt();	
+		Serial.print(String(numero));
 		
 	}while((numero<1) || (numero>10));
 	
