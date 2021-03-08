@@ -39,11 +39,14 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite PRIMER NUMERO: "); while(Serial.available()){} n1 = Serial.parseInt();
-	Serial.println("Digite SEGUNDO NUMERO: "); while(Serial.available()){} n2 = Serial.parseInt();
-	Serial.println("Digite TERCER NUMERO: "); while(Serial.available()){} n3 = Serial.parseInt();
-	Serial.println("Digite CUARTO NUMERO: "); while(Serial.available()){} n4 = Serial.parseInt();	
-
+	Serial.println("Digite PRIMER NUMERO: "); while(!Serial.available()){} n1 = Serial.parseInt();
+	Serial.print(String(n1));
+	Serial.println("Digite SEGUNDO NUMERO: "); while(!Serial.available()){} n2 = Serial.parseInt();
+	Serial.print(String(n2));
+	Serial.println("Digite TERCER NUMERO: "); while(!Serial.available()){} n3 = Serial.parseInt();
+	Serial.print(String(n3));
+	Serial.println("Digite CUARTO NUMERO: "); while(!Serial.available()){} n4 = Serial.parseInt();	
+	Serial.print(String(n4));
 	
 	if((n1==n4)||(n2==n4)||(n3==n4)){
 		Serial.println("El numero coincide con uno de los numeros anteriores ");
