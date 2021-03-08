@@ -37,7 +37,8 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite una vocal: "); while(Serial.available()){} letra = Serial.parseInt();	
+	Serial.println("Digite una vocal: "); while(!Serial.available()){} letra = Serial.parseInt();
+	Serial.print(String(letra));
 
 	switch(letra){
 		case 'a':
