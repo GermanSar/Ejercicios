@@ -36,12 +36,18 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el valor de a: "); while(Serial.available()){} a = Serial.parseInt();	
-	Serial.println("Digite el valor de b: "); while(Serial.available()){} b = Serial.parseInt();	
-	Serial.println("Digite el valor de c: "); while(Serial.available()){} c = Serial.parseInt();	
-	Serial.println("Digite el valor de d: "); while(Serial.available()){} d = Serial.parseInt();
-	Serial.println("Digite el valor de e: "); while(Serial.available()){} e = Serial.parseInt();
-	Serial.println("Digite el valor de f: "); while(Serial.available()){} f = Serial.parseInt();	
+	Serial.println("Digite el valor de a: "); while(!Serial.available()){} a = Serial.parseInt();
+	Serial.print(String(a));
+	Serial.println("Digite el valor de b: "); while(!Serial.available()){} b = Serial.parseInt();	
+	Serial.print(String(b));
+	Serial.println("Digite el valor de c: "); while(!Serial.available()){} c = Serial.parseInt();	
+	Serial.print(String(c));
+	Serial.println("Digite el valor de d: "); while(!Serial.available()){} d = Serial.parseInt();
+	Serial.print(String(d));
+	Serial.println("Digite el valor de e: "); while(!Serial.available()){} e = Serial.parseInt();
+	Serial.print(String(e));
+	Serial.println("Digite el valor de f: "); while(!Serial.available()){} f = Serial.parseInt();	
+	Serial.print(String(f));
 
   	resultado = (a+(b/c))/(d+(e/f));
 	  
