@@ -38,9 +38,12 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Ingrese nota1: "); while(Serial.available()){} nota1 = Serial.parseInt();	
-	Serial.println("Ingrese nota2: "); while(Serial.available()){} nota2 = Serial.parseInt();
-	Serial.println("Ingrese nota3: "); while(Serial.available()){} nota3 = Serial.parseInt();	
+	Serial.println("Ingrese nota1: "); while(!Serial.available()){} nota1 = Serial.parseInt();	
+	Serial.print(String(nota1));
+	Serial.println("Ingrese nota2: "); while(!Serial.available()){} nota2 = Serial.parseInt();
+	Serial.print(String(nota2));
+	Serial.println("Ingrese nota3: "); while(!Serial.available()){} nota3 = Serial.parseInt();	
+	Serial.print(String(nota3));
 		
   	notaFinalMedia= (nota1+nota2+nota3)/3;
 	  
