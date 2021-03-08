@@ -35,9 +35,11 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite el valor de x: "); while(Serial.available()){} x = Serial.parseInt();	
-    Serial.println("Digite el valor de y: "); while(Serial.available()){} y = Serial.parseInt();
-
+	Serial.println("Digite el valor de x: "); while(!Serial.available()){} x = Serial.parseInt();	
+	Serial.print(String(x));
+    	Serial.println("Digite el valor de y: "); while(!Serial.available()){} y = Serial.parseInt();
+	Serial.print(String(y));
+	
 	for(int i=1;i<=y;i++){
 		elevacion *= x;
 	}
