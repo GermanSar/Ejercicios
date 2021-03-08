@@ -43,7 +43,8 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite un caracter: "); while(Serial.available()){} letra = Serial.parseInt();	
+	Serial.println("Digite un caracter: "); while(!Serial.available()){} letra = Serial.parseInt();	
+	Serial.print(String(letra));
 
 	switch(letra){
 		case 'a':
