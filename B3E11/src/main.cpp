@@ -59,16 +59,18 @@ void loop()
 	Serial.println("2. Retirar dinero de la cuenta");
 	Serial.println("3. Salir");
 	Serial.println("Opcion:");
-	Serial.println("Opc: "); while(Serial.available()){} opc = Serial.parseInt();	
+	Serial.println("Opc: "); while(!Serial.available()){} opc = Serial.parseInt();	
 	
 	switch(opc){
-		case 1: Serial.println("\nCuanto dinero desea ingresar en cuenta"); while(Serial.available()){} extra = Serial.parseInt();
+		case 1: Serial.println("\nCuanto dinero desea ingresar en cuenta"); while(!Serial.available()){} extra = Serial.parseInt();
+			Serial.print(String(extra));
 								
 				saldo = saldo_inicial + extra;
 
 				Serial.println("\nDinero en cuenta: " + String(saldo));break;
 
-		case 2: Serial.println("\nCuanto dinero desea retirar"); while(Serial.available()){} retiro = Serial.parseInt();
+		case 2: Serial.println("\nCuanto dinero desea retirar"); while(!Serial.available()){} retiro = Serial.parseInt();
+			Serial.print(String(retiro));
 		
 				
 				if(retiro > saldo_inicial){
