@@ -36,8 +36,9 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite el numero de terminos a sumar: "); while(Serial.available()){} n = Serial.parseInt();	
-    
+	Serial.println("Digite el numero de terminos a sumar: "); while(!Serial.available()){} n = Serial.parseInt();	
+    	Serial.print(String(n));
+	
 	for(int i=1;i<=n;i++){
 		elevacion = pow(2,i);
 		suma += elevacion;
