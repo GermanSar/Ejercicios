@@ -33,8 +33,10 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el valor de x: "); while(Serial.available()){} x = Serial.parseInt();	
-	Serial.println("Digite el valor de y: "); while(Serial.available()){} y = Serial.parseInt();
+	Serial.println("Digite el valor de x: "); while(!Serial.available()){} x = Serial.parseInt();	
+	Serial.print(String(x));
+	Serial.println("Digite el valor de y: "); while(!Serial.available()){} y = Serial.parseInt();
+	Serial.print(String(y));
 	
 	resultado = sqrt(x)/(pow(y,2)-1);
 
