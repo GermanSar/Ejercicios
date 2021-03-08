@@ -36,8 +36,9 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite su edad: "); while(Serial.available()){} edad = Serial.parseInt();	
-
+	Serial.println("Digite su edad: "); while(!Serial.available()){} edad = Serial.parseInt();	
+	Serial.print(String(edad));
+	
 	if((edad>=18)&&(edad<=25)){
 		Serial.println("Su edad esta en el rango de [18-25]: " + String(edad));
 	}
