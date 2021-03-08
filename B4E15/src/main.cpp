@@ -55,7 +55,8 @@ void loop()
 	dato = 1 + rand()%(101-1);
 	
 	do{
-		Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
+		Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+		Serial.print(String(numero));
 		if(numero>dato){
 			Serial.println("Es un numero menor\n ");
 		}
