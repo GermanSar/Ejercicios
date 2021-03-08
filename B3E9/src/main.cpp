@@ -84,8 +84,9 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
-
+	Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+	Serial.print(String(numero));
+	
 	//2152
 	unidades = numero%10; numero /= 10; //unidades = 2 , numero = 215
 	decenas = numero%10; numero /= 10; //decenas = 5 , numero = 21
