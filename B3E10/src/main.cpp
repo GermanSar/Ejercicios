@@ -46,8 +46,9 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite un numero entre [1-12]: "); while(Serial.available()){} numero = Serial.parseInt();	
-
+	Serial.println("Digite un numero entre [1-12]: "); while(!Serial.available()){} numero = Serial.parseInt();	
+	Serial.print(String(numero));
+	
 	switch(numero){
 		case 1: Serial.println("ENERO "); break;
 		case 2: Serial.println("FEBRERO "); break;
