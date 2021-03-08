@@ -40,10 +40,13 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el valor de n1: "); while(Serial.available()){} n1 = Serial.parseInt();	
-	Serial.println("Digite el valor de n2: "); while(Serial.available()){} n2 = Serial.parseInt();
-	Serial.println("Digite el valor de n3: "); while(Serial.available()){} n3 = Serial.parseInt();
-		
+	Serial.println("Digite el valor de n1: "); while(!Serial.available()){} n1 = Serial.parseInt();	
+	Serial.print(String(n1));
+	Serial.println("Digite el valor de n2: "); while(!Serial.available()){} n2 = Serial.parseInt();
+	Serial.print(String(n2));
+	Serial.println("Digite el valor de n3: "); while(!Serial.available()){} n3 = Serial.parseInt();
+	Serial.print(String(n3));
+	
 	if((n1>n2)&&(n1>n3)){
 		Serial.println("el mayor es: " + String(n1));
 	}
