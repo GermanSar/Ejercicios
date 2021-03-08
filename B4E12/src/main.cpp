@@ -42,8 +42,9 @@ void setup()
 
 void loop() 
 {
-	Serial.println("Digite el numero de elementos: "); while(Serial.available()){} n = Serial.parseInt();	
-    
+	Serial.println("Digite el numero de elementos: "); while(!Serial.available()){} n = Serial.parseInt();	
+    	Serial.print(String(n));
+	
 	for(int i=1;i<=n;i++){
 		if(i%2==0){//los numeros pares son negativos
 			negativo = i * -1; //los cambiamos de signo
