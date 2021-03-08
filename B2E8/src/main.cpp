@@ -33,8 +33,10 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite el cateto 1: "); while(Serial.available()){} cateto1 = Serial.parseInt();	
-	Serial.println("Digite el cateto 2: "); while(Serial.available()){} cateto2 = Serial.parseInt();
+	Serial.println("Digite el cateto 1: "); while(!Serial.available()){} cateto1 = Serial.parseInt();	
+	Serial.print(String(cateto1));
+	Serial.println("Digite el cateto 2: "); while(!Serial.available()){} cateto2 = Serial.parseInt();
+	Serial.print(String(cateto2));
 	
 	hipotenusa = sqrt(pow(cateto1,2)+pow(cateto2,2));
 
