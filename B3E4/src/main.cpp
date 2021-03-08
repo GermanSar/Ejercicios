@@ -39,8 +39,9 @@ void setup()
 void loop() 
 {
 	
-	Serial.println("Digite un numero: "); while(Serial.available()){} numero = Serial.parseInt();	
-		
+	Serial.println("Digite un numero: "); while(!Serial.available()){} numero = Serial.parseInt();	
+	Serial.print(String(numero));
+	
 	if(numero==0){
 		Serial.println("el numero es cero: " + String(numero));
 	}
