@@ -50,7 +50,8 @@ void loop()
 {
 	
 	for(int i=0;i<24;i+=4){ //vamos aumentando de 4 en 4 horas
-		Serial.println("Digite la temperatura a las "); while(Serial.available()){} temperatura = Serial.parseInt();	
+		Serial.println("Digite la temperatura a las "); while(!Serial.available()){} temperatura = Serial.parseInt();	
+		Serial.print(String(temperatura));
 		
 		suma_temperatura += temperatura;
 		
